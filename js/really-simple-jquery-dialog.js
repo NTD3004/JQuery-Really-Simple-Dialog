@@ -16,14 +16,6 @@
 	$.fn.simpleAlert = function(options) {
 		if (typeof options === 'undefined') options = {};
 
-		$.fn.attr = function(attr, value) {
-            var returnValue = _attr.apply(this, arguments);
-
-            if (returnValue === 'undefined') returnValue = '';
-
-            return returnValue;
-        };
-
 		var defaultOptions = {
 	        title: 'Alert',
 	        message: '',
@@ -56,14 +48,6 @@
 
 	$.fn.simpleConfirm = function(options) {
 		if (typeof options === 'undefined') options = {};
-
-		$.fn.attr = function(attr, value) {
-            var returnValue = _attr.apply(this, arguments);
-
-            if (returnValue === 'undefined') returnValue = '';
-
-            return returnValue;
-        };
 
         var defaultOptions = {
 	        title: 'Confirm',
@@ -106,14 +90,6 @@
 
 	$.fn.simplePrompt = function(options) {
 		if (typeof options === 'undefined') options = {};
-
-		$.fn.attr = function(attr, value) {
-            var returnValue = _attr.apply(this, arguments);
-
-            if (returnValue === 'undefined') returnValue = '';
-
-            return returnValue;
-        };
 
         var defaultOptions = {
 	        title: 'Prompt',
