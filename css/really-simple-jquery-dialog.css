@@ -1,3 +1,17 @@
+/**
+ * jQuery Really Simple Dialog plugin 1.0
+ *
+ * Copyright (c) 2017 NTD3004 (https://github.com/NTD3004/JQuery-Really-Simple-Dialog)
+ *
+ * Samples and instructions at: 
+ * https://github.com/NTD3004/JQuery-Really-Simple-Dialog
+ *
+ * This script is free software: you can redistribute it and/or modify it 
+ * under the terms of the GNU General Public License as published by the Free 
+ * Software Foundation, either version 3 of the License, or (at your option)
+ * any later version.
+ */
+
 .simple-dialog {
 	position: fixed;
     top: 0;
