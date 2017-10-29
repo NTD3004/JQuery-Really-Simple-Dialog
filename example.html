@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Really Simple Jquery Dialog</title>
+	<link rel="stylesheet" href="css/really-simple-jquery-dialog.css">
+</head>
+<body>
+
+	<a href="#" id="showAlert">Show Alert</a>
+	<a href="#" id="showConfirm">Show Confirm</a>
+	<a href="#" id="showPrompt">Show Prompt</a>
+
+	<div id="testConfirm"></div>
+	<div id="testAlert"></div>
+	<div id="testPrompt"></div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/really-simple-jquery-dialog.js"></script>
+<script type="text/javascript">
+	$('#showAlert').click(function(e) {
+		$('#testAlert').simpleAlert({
+			message: "Hello World!!"
+		});
+	});
+
+	$('#showConfirm').click(function(e) {
+		$('#testConfirm').simpleConfirm({
+			message: "Hello World!!",
+			success: function() {
+				$('#testAlert').simpleAlert({
+					message: "You clicked Accept button."
+				});
+			},
+			cancel: function() {
+				$('#testAlert').simpleAlert({
+					message: "You clicked Cancel button."
+				});
+			}
+		});
+	});
+
+	$('#showPrompt').click(function(e) {
+		$('#testPrompt').simplePrompt({
+			message: "Hello World!!",
+			success: function(result) {
+				$('#testAlert').simpleAlert({
+					message: "You clicked Accept button and your answer is: " + result
+				});
+			},
+			cancel: function(result) {
+				$('#testAlert').simpleAlert({
+					message: "You clicked Cancel button and your answer is: " + result
+				});
+			}
+		});
+	});
+</script>
+</body>
+</html>
